@@ -10,7 +10,7 @@ for (var i = 0; i < segNum; i++){
 
 function preload(){
   soundFormats('mp3');
-  track = loadSound('/assets/tracks/42 Guitars mp3.mp3');
+  track = loadSound('my_site/assets/tracks/42 Guitars mp3.mp3');
 }
 function setup(){
   var myCanvas = createCanvas(windowWidth, windowHeight);
