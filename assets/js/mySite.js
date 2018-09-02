@@ -1,3 +1,7 @@
+if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+ throw new Error("This script is not supported on mobile units");
+}
+
 var myCanvas;
 var introSong, fft;
 var button, wrapper;
@@ -63,5 +67,4 @@ function getRemainingTimeInStrFormat(){
 
 function windowResized(){
   resizeCanvas(windowWidth, windowHeight);
-  console.log('rezise');
 }
