@@ -12,7 +12,7 @@ layout: 'page'
 <hr>
 {% for project in site.data.visuals %}
 <div class="row">
-  <a class="visual-link" href="{{ project.url }}">
+  <a class="visual-link" href="{{site.baseurl}}/{{ project.url }}">
     {{ project.title }}
   </a>
 </div>
