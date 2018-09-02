@@ -13,11 +13,11 @@ layout: 'page'
 {% for item in site.data.visuals %}
 <div class="row">
   <a class="visual-link" href="{{item.url}}">
-    {{ project.title }}
+    {{ item.title }}
   </a>
 </div>
 <div class="row">
-  <p class="bio"style="margin: 0; font-size: 18px;">{{ project.description }}</p>
+  <p class="bio"style="margin: 0; font-size: 18px;">{{ item.description }}</p>
 </div>
 <hr>
 {% endfor %}
