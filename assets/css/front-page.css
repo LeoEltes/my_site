@@ -102,15 +102,6 @@ h1{
   margin: 0;
 }
 
-#info-text-2{
-  color: white;
-  display: block;
-  text-align: center;
-  padding-top: 28px;
-  margin: 0;
-  display: none;
-}
-
 .content{
   z-index: inherit;
   text-align: center;
@@ -160,10 +151,6 @@ h1{
  and (max-width: 768px){
    #info-text-1{
      display: none;
-   }
-
-   #info-text-2{
-     display: block;
    }
  }
 
