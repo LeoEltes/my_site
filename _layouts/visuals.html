@@ -10,9 +10,9 @@ layout: 'page'
   </p>
 </div>
 <hr>
-{% for project in site.data.visuals %}
+{% for item in site.data.visuals %}
 <div class="row">
-  <a class="visual-link" href="my_site/visuals/42-guitas.html">
+  <a class="visual-link" href="{{item.url}}">
     {{ project.title }}
   </a>
 </div>
