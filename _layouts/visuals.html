@@ -12,12 +12,14 @@ layout: 'page'
 <hr>
 {% for item in site.visuals %}
 <div class="row">
-  <a class="visual-link" href="{{item.url}}">
+  <a class="visual-link" href="{{site.baseurl}}/{{item.url}}">
     {{ item.header }}
   </a>
 </div>
 <div class="row">
   <p class="bio"style="margin: 0; font-size: 18px;">{{ item.description }}</p>
+  <p> {{site.baseurl}}</p>
+  <p> {{item.url}} </p>
 </div>
 <hr>
 {% endfor %}
