@@ -1,0 +1,23 @@
+---
+layout: 'page'
+---
+<div class='text-wrap'>
+  <p class="bio">
+    Here you can find visuals to some of the tracks Leo has written and produced.
+    Some of them are interactive visuals and some of them are not. They all require
+    you to run JavaScript on your browser (your browser should do that by default)
+    to see and interact with them. All visuals are programmed by Leo using P5.js.
+  </p>
+</div>
+<hr>
+{% for project in site.data.visuals %}
+<div class="row">
+  <a class="visual-link" href="{{ project.url }}">
+    {{ project.title }}
+  </a>
+</div>
+<div class="row">
+  <p class="bio"style="margin: 0; font-size: 18px;">{{ project.description }}</p>
+</div>
+<hr>
+{% endfor %}

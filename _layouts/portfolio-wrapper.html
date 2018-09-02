@@ -1,0 +1,27 @@
+---
+layout: 'page'
+---
+{% for project in site.data.portfolio %}
+<div class="row">
+  <div class="col-6">
+    <div class="aspect-ratio">
+      <iframe src="{{ project.url }}" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
+      </iframe>
+    </div>
+  </div>
+  <div class="portfolio-description-box">
+    <h4 class="portfolio-title">
+      {{ project.title }}
+    </h4>
+    <h5 class="portfolio-date">
+      {{ project.date }}
+    </h5>
+    <p class="portfolio-text">
+      {{ project.description }}
+    </p>
+    <p class="credits-text">
+      {{ project.credits }}
+    </p>
+  </div>
+</div>
+{% endfor %}

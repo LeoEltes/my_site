@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title> {{ page.title }} </title>
+    <meta charset="utf-8">
+    <meta name="viewport" width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0>
+    <link rel="Stylesheet" href="assets/css/mainCSS.css">
+  </head>
+  <body>
+    <div id="wrapper">
+      {% include header.html %}
+      <br>
+      {{content}}
+      <br>
+      {% include footer.html %}
+    </div>
+  </body>
+</html>

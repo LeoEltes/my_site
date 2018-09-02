@@ -1,0 +1,267 @@
+* {
+   box-sizing: border-box;
+   -webkit-margin-before: 0em;
+   -webkit-margin-start: 0em;
+   -webkit-margin-after: 0em;
+   -webkit-margin-end: 0em;
+   line-height: normal;
+}
+
+a{
+  display: inline-block;
+  text-decoration: none;
+}
+
+html, body{
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+h2{
+  font-family: sans-serif;
+  font-weight: 400;
+  margin: 17px 0 17px 0;
+  font-size: 42px;
+}
+
+h3{
+  font-family: sans-serif;
+  font-weight: 200;
+  margin: 17px 0 17px 0;
+  font-size: 26px;
+}
+
+hr{
+  border: 0;
+height: 2px;
+background-image: -webkit-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+background-image: -moz-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+background-image: -ms-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+background-image: -o-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+}
+
+.bio{
+  padding: 6px 0 6px 0;
+  margin: 0;
+  font-size: 20px;
+}
+.portfolio-title{
+  text-align: left;
+  margin: 0;
+  font-size: 24px;
+  font-family: sans-serif;
+}
+
+.portfolio-date{
+  text-align: left;
+  margin: 0;
+  font-size: 20px;
+  color: #6E6E6E;
+  font-family: sans-serif;
+}
+
+#wrapper{
+  background-color: Transparent;
+  margin: 0 auto;
+  width: inherit;
+  height: inherit;
+  position: absolute;
+}
+
+/* This element defines the size the iframe will take.
+   In this example we want to have a ratio of 25:14 */
+.aspect-ratio {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 0;
+  padding-bottom: 56.25%; /* The height of the item will now be 56% of the width. */
+}
+
+/* Adjust the iframe so it's rendered in the outer-width and outer-height of it's parent */
+.aspect-ratio iframe {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+}
+
+.row::after {
+   content: "";
+   clear: both;
+   display: table;
+   margin: 0 0 8px 0;
+}
+
+.about-image{
+  width: 100%;
+  padding: 0 12px 0 0;
+}
+
+.right-container-nav{
+  text-align: right;
+  display: inline;
+  position: fixed;
+}
+
+.left-container{
+  text-align: left;
+  padding-left: 34px !important;
+}
+
+.content-wrap{
+  text-align: center;
+  padding-left: 32px !important;
+  padding-right: 32px !important;
+}
+
+.text-wrap{
+  width: 50%;
+  display: inline-block;
+  text-align: center;
+  margin: 0;
+}
+
+.portfolio-description-box{
+  overflow: hidden;
+  width: 50%;
+  float: left;
+  padding: 10px;
+}
+
+.portfolio-text{
+  text-align: left;
+  vertical-align: middle;
+  font-size: 20px;
+  margin: 0;
+}
+
+.credits-text{
+  text-align: left;
+  vertical-align: middle;
+  font-style: oblique;
+  font-size: 16px;
+  padding-top: 12px;
+  margin: 0;
+}
+
+.important-link{
+  font-family: sans-serif;
+  letter-spacing: 2px;
+  margin: 0 10px 0 10px;
+  font-size: 20px;
+  font-weight: 100;
+  color: black;
+}
+
+.active{
+  border-bottom: 2px solid black;
+}
+
+.logos{
+  position: relative;
+  text-align: center;
+  display: inline-block;
+  width: 100%;
+  height: auto;
+  bottom: 0%;
+  padding-bottom: 20px;
+  padding-top: 12px;
+}
+
+.logo{
+  width: 42px;
+  height: 42px;
+  margin: 0 6px 0 6px;
+  border-radius: 50%;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+}
+
+.logo:hover{
+  opacity: 0.4;
+  filter: alpha(opacity=40);
+  -moz-box-shadow:    inset 0 0 3px 3px black;
+  -webkit-box-shadow: inset 0 0 3px 3px black;
+  box-shadow:         inset 0 0 3px 3px black;
+}
+
+.visual-link{
+  font-size: 28px;
+  color: black;
+  padding: 0;
+  margin: 0;
+}
+
+[class*="col-"] {
+    float: left;
+    padding: 10px;
+}
+
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+
+@media only screen and (max-width: 915px) {
+  .portfolio-title{
+    font-size: 18px;
+  }
+  .text-wrap{
+    width: 80%;
+  }
+}
+
+@media only screen
+ and (min-width: 320px)
+ and (max-width: 768px){
+   .col-6{
+     width: 100%;
+   }
+   .portfolio-description-box{
+     width: 100%;
+   }
+   .portfolio-title{
+     text-align: left;
+   }
+   .portfolio-date{
+     text-align: left;
+   }
+   .right-container-nav{
+     position: relative;
+     float: right;
+     width: 100%;
+     text-align: center;
+     padding: 4px 0 4px 0;
+   }
+   .important-link{
+     font-size: 17px;
+     width: 100%;
+     margin: 6px 0 6px 0;
+   }
+   .active{
+     border: 0 none black;
+     text-decoration: underline;
+   }
+
+   .left-container{
+     width: 100%;
+   }
+
+   .logo{
+     width: 38px;
+     height: 38px;
+     margin: 0 5px 0 5px;
+   }
+ }
