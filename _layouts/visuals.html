@@ -12,7 +12,7 @@ layout: 'page'
 <hr>
 {% for item in site.visuals %}
 <div class="row">
-  <a class="visual-link" href="my_site/visuals/42-guitars/">
+  <a class="visual-link" href="{{item.url | relative_url}}">
     {{ item.header }}
   </a>
 </div>
