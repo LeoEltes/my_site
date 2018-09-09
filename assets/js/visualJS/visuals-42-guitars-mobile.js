@@ -1,4 +1,5 @@
 var track;
+angleMode(DEGREES);
 var xPositionHistory = [],
   yPositionHistory = [],
   segNum = 12;
