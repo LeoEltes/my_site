@@ -1,7 +1,7 @@
 var track;
 var xPositionHistory = [],
   yPositionHistory = [],
-  segNum = 8;
+  segNum = 6;
 
 for (var i = 0; i < segNum; i++){
   xPositionHistory[i] = 0;
@@ -30,6 +30,7 @@ function draw(){
 }
 
 function dragSegment(i, xin, yin){
+  angleMode(RADIANS);
   var dx = xin - xPositionHistory[i];
   var dy = yin - yPositionHistory[i];
   var angle = atan2(dy, dx);
@@ -51,7 +52,7 @@ function segment(x, y){
   push();
   translate(x, y);
   fill(random(255), random(255), random(255));
-  ellipse(random(-10, 10), random(-10, 10), random(10, 25));
+  ellipse(random(-8, 8), random(-8, 8), random(8, 20));
   pop();
 }
 
