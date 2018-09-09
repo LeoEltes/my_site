@@ -15,7 +15,6 @@ function preload(){
 
 function setup(){
   var myCanvas = createCanvas(windowWidth, windowHeight, WEBGL);
-  angleMode(DEGREES);
   myCanvas.style('position', 'absolute');
   frameRate(30);
 }
@@ -23,7 +22,7 @@ function setup(){
 function draw(){
   background(animateColour());
   translate(-windowWidth/2, -windowHeight/2, 0);
-  dragSegment(0, map(sin(rotationZ), -1, 1, 0, windowWidth), map(cos(rotationX), -1, 1, 0, windowHeight));
+  dragSegment(0, map(sin(degrees(rotationZ)), -1, 1, 0, windowWidth), map(cos(degrees(rotationX)), -1, 1, 0, windowHeight));
   for( var i=0; i<xPositionHistory.length-1; i++) {
     dragSegment(i+1, xPositionHistory[i], yPositionHistory[i]);
   }
