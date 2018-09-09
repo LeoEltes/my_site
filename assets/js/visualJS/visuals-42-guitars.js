@@ -23,7 +23,7 @@ function preload(){
 
 function setup(){
   var myCanvas = createCanvas(windowWidth, windowHeight);
-  myCanvas.style('position', 'fixed');
+  myCanvas.style('position', 'sticky');
   frameRate(30);
   noCursor();
 }
