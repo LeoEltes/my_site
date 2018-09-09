@@ -1,7 +1,7 @@
 var track;
 var xPositionHistory = [],
   yPositionHistory = [],
-  segNum = 2;
+  segNum = 15;
 
 for (var i = 0; i < segNum; i++){
   xPositionHistory[i] = 0;
@@ -14,24 +14,18 @@ function preload(){
 }
 
 function setup(){
-  var myCanvas = createCanvas(windowWidth, windowHeight, WEBGL);
+  var myCanvas = createCanvas(windowWidth, windowHeight);
   myCanvas.style('position', 'absolute');
   frameRate(30);
+  noCursor();
 }
 
 function draw(){
   background(animateColour());
-  dragSegment(0, 0, mouseY);
+  dragSegment(0, mouseX, mouseY);
   for( var i=0; i<xPositionHistory.length-1; i++) {
     dragSegment(i+1, xPositionHistory[i], yPositionHistory[i]);
   }
-}
-
-function animateColour(){
-  redColor = map(cos(millis()/4000), -1, 1, 0, 255);
-  greenColor = map(cos(millis()/3750), -1, 1, 0, 255);
-  blueColor = map(cos(millis()/4250), -1, 1, 0, 255);
-  return color(redColor, greenColor, blueColor);
 }
 
 function dragSegment(i, xin, yin){
@@ -43,6 +37,15 @@ function dragSegment(i, xin, yin){
   segment(xPositionHistory[i], yPositionHistory[i]);
 }
 
+function mouseMoved(){
+  if(track.isPlaying()){
+    return false;
+  }
+  else{
+    track.play();
+  }
+}
+
 function segment(x, y){
   push();
   translate(x, y);
@@ -51,11 +54,9 @@ function segment(x, y){
   pop();
 }
 
-function mousePressed(){
-  if(track.isPlaying()){
-    return false;
-  }
-  else{
-    track.play();
-  }
+function animateColour(){
+  redColor = map(cos(millis()/4000), -1, 1, 0, 255);
+  greenColor = map(cos(millis()/3750), -1, 1, 0, 255);
+  blueColor = map(cos(millis()/4250), -1, 1, 0, 255);
+  return color(redColor, greenColor, blueColor);
 }
