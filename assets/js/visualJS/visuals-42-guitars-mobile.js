@@ -22,7 +22,8 @@ function setup(){
 function draw(){
   background(animateColour());
   translate(-windowWidth/2, -windowHeight/2, 0);
-  dragSegment(0, map(sin(degrees(rotationZ)), -1, 1, 0, windowWidth), map(cos(degrees(rotationX)), -1, 1, 0, windowHeight));
+  angleMode(DEGREES);
+  dragSegment(0, map(sin(rotationZ), -1, 1, 0, windowWidth), map(cos(rotationX), -1, 1, 0, windowHeight));
   for( var i=0; i<xPositionHistory.length-1; i++) {
     dragSegment(i+1, xPositionHistory[i], yPositionHistory[i]);
   }
@@ -55,6 +56,7 @@ function segment(x, y){
 }
 
 function animateColour(){
+  angleMode(RADIANS);
   redColor = map(cos(millis()/4000), -1, 1, 0, 255);
   greenColor = map(cos(millis()/3750), -1, 1, 0, 255);
   blueColor = map(cos(millis()/4250), -1, 1, 0, 255);
