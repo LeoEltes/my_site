@@ -1,7 +1,7 @@
 var track;
 var xPositionHistory = [],
   yPositionHistory = [],
-  segNum = 2;
+  segNum = 12;
 
 for (var i = 0; i < segNum; i++){
   xPositionHistory[i] = 0;
@@ -17,13 +17,12 @@ function setup(){
   var myCanvas = createCanvas(windowWidth, windowHeight, WEBGL);
   myCanvas.style('position', 'absolute');
   frameRate(30);
-  noCursor();
 }
 
 function draw(){
   background(animateColour());
   translate(-windowWidth/2, -windowHeight/2, 0);
-  dragSegment(0, map(rotationZ, 0, 359, 0, windowWidth), map(rotationX, -180, 180, 0, windowHeight));
+  dragSegment(0, map(sin(rotationZ), -1, 1, 0, windowWidth), map(cos(rotationX), -1, 1, 0, windowHeight));
   for( var i=0; i<xPositionHistory.length-1; i++) {
     dragSegment(i+1, xPositionHistory[i], yPositionHistory[i]);
   }
@@ -51,7 +50,7 @@ function segment(x, y){
   push();
   translate(x, y);
   fill(random(255), random(255), random(255));
-  ellipse(random(-25, 25), random(-25, 25), random(20, 35));
+  ellipse(random(-10, 10), random(-10, 10), random(10, 25));
   pop();
 }
 
