@@ -22,6 +22,8 @@ function setup(){
 function draw(){
   background(animateColour());
   dragSegment(0, map(rotationZ, 0, 359, 0, windowWidth, true), map(rotationX, -180, 180, 0, windowHeight, true));
+  console.log("Z: " +rotationZ);
+  console.log("X: " +rotationX);
   for( var i=0; i<xPositionHistory.length-1; i++) {
     dragSegment(i+1, xPositionHistory[i], yPositionHistory[i]);
   }
