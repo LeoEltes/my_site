@@ -1,7 +1,15 @@
 var track, fft;
 var xPositionHistory = [],
   yPositionHistory = [],
+  segNum;
+
+if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+  segNum = 15;
+}
+
+else{
   segNum = 25;
+}
 
 for (var i = 0; i < segNum; i++){
   xPositionHistory[i] = 0;
@@ -12,9 +20,10 @@ function preload(){
   soundFormats('mp3');
   track = loadSound('/leo_eltes/assets/tracks/42 Guitars mp3.mp3');
 }
+
 function setup(){
   var myCanvas = createCanvas(windowWidth, windowHeight);
-  myCanvas.style('position', 'absolute');
+  myCanvas.style('position', 'fixed');
   frameRate(30);
   noCursor();
 }
