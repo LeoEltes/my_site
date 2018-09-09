@@ -1,7 +1,7 @@
 var track;
 var xPositionHistory = [],
   yPositionHistory = [],
-  segNum = 12;
+  segNum = 8;
 
 for (var i = 0; i < segNum; i++){
   xPositionHistory[i] = 0;
