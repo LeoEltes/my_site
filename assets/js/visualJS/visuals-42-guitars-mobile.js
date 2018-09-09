@@ -14,7 +14,7 @@ function preload(){
 }
 
 function setup(){
-  var myCanvas = createCanvas(windowWidth, windowHeight);
+  var myCanvas = createCanvas(windowWidth, windowHeight, WEBGL);
   myCanvas.style('position', 'absolute');
   frameRate(30);
   noCursor();
