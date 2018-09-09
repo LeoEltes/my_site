@@ -21,11 +21,7 @@ function setup(){
 
 function draw(){
   background(animateColour());
-  var currentXPos = map(rotationZ, 0, 359, 0, windowWidth, true);
-  var currentYPos = map(rotationX, -180, 180, 0, windowHeight, true);
   dragSegment(0, 0, mouseY);
-  console.log("Zrotation, xpos: " +currentXPos);
-  console.log("Xrotation, ypos: " +currentYPos);
   for( var i=0; i<xPositionHistory.length-1; i++) {
     dragSegment(i+1, xPositionHistory[i], yPositionHistory[i]);
   }
