@@ -1,5 +1,4 @@
 var track;
-angleMode(DEGREES);
 var xPositionHistory = [],
   yPositionHistory = [],
   segNum = 12;
@@ -16,6 +15,7 @@ function preload(){
 
 function setup(){
   var myCanvas = createCanvas(windowWidth, windowHeight, WEBGL);
+  angleMode(DEGREES);
   myCanvas.style('position', 'absolute');
   frameRate(30);
 }
