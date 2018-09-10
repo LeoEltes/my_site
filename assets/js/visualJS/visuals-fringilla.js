@@ -13,13 +13,13 @@ function setup(){
   var myCanvas = createCanvas(windowWidth, windowHeight);
   myCanvas.style('position', 'absolute');
   lpFilterDelay = new p5.Delay();
-  lpFilterDelay.process(track, 0.25, 0.3, 480);
+  lpFilterDelay.process(track, 0.25, 0.52, 1000);
 
   delay = new p5.Delay();
-  delay.process(track, 0.54, 0.5);
+  delay.process(track, 0.62, 0.6);
 
   reverb = new p5.Reverb();
-  reverb.process(track, 4.5, 6);
+  reverb.process(track, 4.5, 66, true);
 
   lpFilterDelay.disconnect();
   delay.disconnect();
