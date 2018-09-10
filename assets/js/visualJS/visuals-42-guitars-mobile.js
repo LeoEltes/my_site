@@ -22,7 +22,7 @@ function setup(){
 function draw(){
   background(animateColour());
   angleMode(DEGREES);
-  dragSegment(0, map(sin(rotationZ), -1, 1, -windowWidth/2, windowWidth/2), map(-cos(rotationX), -1, 1, -windowHeight/2, windowHeight/2));
+  dragSegment(0, map(-sin(rotationZ), -1, 1, -windowWidth/2, windowWidth/2, true), map(-cos(rotationX), -1, 1, -windowHeight/2, windowHeight/2, true));
   for( var i=0; i<xPositionHistory.length-1; i++) {
     dragSegment(i+1, xPositionHistory[i], yPositionHistory[i]);
   }
