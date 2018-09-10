@@ -61,7 +61,7 @@ class FreqCircle{
   }
 
     analyzeFreq(freqAmplitude){
-      this.radius = map(freqAmplitude, 0, 255, 0, 200);
+      this.radius = map(freqAmplitude, 0, 255, 0, windowWidth/9);
     }
 
     display(){
