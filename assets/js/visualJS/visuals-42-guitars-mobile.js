@@ -20,7 +20,7 @@ var vy = 0;
 var ax = 0;
 var ay = 0;
 
-var vMultiplier = 0.02;
+var vMultiplier = 1.2;
 var bMultiplier = 0.6;
 
 function preload(){
@@ -97,12 +97,12 @@ function ballMove() {
  		newYpar = 0;
  		vy = -vy * bMultiplier;
  	}
- 	if (newXpar > width - 20) {
- 		newXpar = width - 20;
+ 	if (newXpar > windowWidth - 20) {
+ 		newXpar = windowWidth - 20;
  		vx = -vx * bMultiplier;
  	}
- 	if (newYpar > height - 20) {
- 		newYpar = height - 20;
+ 	if (newYpar > windowHeight - 20) {
+ 		newYpar = windowHeight - 20;
  		vy = -vy * bMultiplier;
  	}
 
