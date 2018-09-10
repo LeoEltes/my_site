@@ -8,6 +8,21 @@ for (var i = 0; i < segNum; i++){
   yPositionHistory[i] = 0;
 }
 
+// Position Variables
+var newXpar = 0;
+var newYpar = 0;
+
+// Speed - Velocity
+var vx = 0;
+var vy = 0;
+
+// Acceleration
+var ax = 0;
+var ay = 0;
+
+var vMultiplier = 0.007;
+var bMultiplier = 0.6;
+
 function preload(){
   soundFormats('mp3');
   track = loadSound('/leo_eltes/assets/tracks/42 Guitars mp3.mp3');
@@ -21,8 +36,8 @@ function setup(){
 
 function draw(){
   background(animateColour());
-  angleMode(DEGREES);
-  dragSegment(0, map(-sin(rotationZ), -1, 1, -windowWidth/2, windowWidth/2, true), map(-cos(rotationX), -1, 1, -windowHeight/2, windowHeight/2, true));
+  ballMove();
+  dragSegment(0, newXpar, newYpar);
   for( var i=0; i<xPositionHistory.length-1; i++) {
     dragSegment(i+1, xPositionHistory[i], yPositionHistory[i]);
   }
@@ -61,4 +76,34 @@ function animateColour(){
   greenColor = map(cos(millis()/3750), -1, 1, 0, 255);
   blueColor = map(cos(millis()/4250), -1, 1, 0, 255);
   return color(redColor, greenColor, blueColor);
+}
+
+function ballMove() {
+
+	ax = accelerationX;
+	ay = accelerationY;
+
+	vx = vx + ay;
+	vy = vy + ax;
+	newYpar = newYpar + vy * vMultiplier;
+	newXpar = newXpar + vx * vMultiplier;
+
+	// Bounce when touch the edge of the canvas
+	if (newXpar < 0) {
+		newXpar = 0;
+		vx = -vx * bMultiplier;
+	}
+ 	if (newYpar < 0) {
+ 		newYpar = 0;
+ 		vy = -vy * bMultiplier;
+ 	}
+ 	if (newXpar > width - 20) {
+ 		newXpar = width - 20;
+ 		vx = -vx * bMultiplier;
+ 	}
+ 	if (newYpar > height - 20) {
+ 		newYpar = height - 20;
+ 		vy = -vy * bMultiplier;
+ 	}
+
 }
