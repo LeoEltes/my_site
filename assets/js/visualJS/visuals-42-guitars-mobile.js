@@ -89,12 +89,12 @@ function ballMove() {
 	newXpar = newXpar + vx * vMultiplier;
 
 	// Bounce when touch the edge of the canvas
-	if (newXpar < 0) {
-		newXpar = 0;
+	if (newXpar < 10) {
+		newXpar = 10;
 		vx = -vx * bMultiplier;
 	}
- 	if (newYpar < 0) {
- 		newYpar = 0;
+ 	if (newYpar < 10) {
+ 		newYpar = 10;
  		vy = -vy * bMultiplier;
  	}
  	if (newXpar > windowWidth - 20) {
