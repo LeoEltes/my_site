@@ -38,7 +38,7 @@ function dragSegment(i, xin, yin){
   segment(xPositionHistory[i], yPositionHistory[i]);
 }
 
-function mouseMoved(){
+function mousePressed(){
   if(track.isPlaying()){
     return false;
   }
