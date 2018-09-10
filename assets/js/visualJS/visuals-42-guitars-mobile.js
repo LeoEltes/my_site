@@ -107,3 +107,7 @@ function ballMove() {
  	}
 
 }
+
+function windowResized(){
+  resizeCanvas(windowWidth, windowHeight);
+}

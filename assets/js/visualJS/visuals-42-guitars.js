@@ -76,3 +76,7 @@ function animateColour(){
   blueColor = map(cos(millis()/4250), -1, 1, 0, 255);
   return color(redColor, greenColor, blueColor);
 }
+
+function windowResized(){
+  resizeCanvas(windowWidth, windowHeight);
+}
