@@ -10,7 +10,8 @@ function preload(){
 }
 
 function setup(){
-  createCanvas(windowWidth, windowHeight);
+  var myCanvas = createCanvas(windowWidth, windowHeight);
+  myCanvas.style('position', 'absolute');
   lpFilterDelay = new p5.Delay();
   lpFilterDelay.process(track, 0.25, 0.3, 480);
 
