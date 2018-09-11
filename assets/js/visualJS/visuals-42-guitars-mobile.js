@@ -20,7 +20,7 @@ var vy = 0;
 var ax = 0;
 var ay = 0;
 
-var vMultiplier = 1.2;
+var vMultiplier = 0.92;
 var bMultiplier = 0.6;
 
 function preload(){
