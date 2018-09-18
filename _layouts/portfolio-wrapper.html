@@ -2,7 +2,7 @@
 layout: 'page'
 ---
 {% assign sorted_pages = (site.data.portfolio | sort: 'date') %}
-{% for project in site.data.portfolio %}
+{% for project in sorted_pages %}
 <div class="row">
   <div class="col-6">
     <div class="aspect-ratio">
