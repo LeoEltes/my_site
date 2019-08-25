@@ -1,10 +1,6 @@
 let scaleArray = ['C#4', 'D#4', 'F#4', 'G#4', 'A#4'];
 let bassArray = ['C#1', "D#1", 'F#1', 'G#1', 'A#1', 'C#2', "D#2", 'F#2', 'G#2', 'A#2'];
 let fullScale = ['C#3','D#3', 'F#3', 'G#3', 'A#3', 'C4', 'C#4', 'D#4', 'F4', 'F#4', 'G#4', 'A#4', 'C#5', 'D#5'];
-let polySynth;
-let time, time1;
-let wait = 10000;
-let wait1 = 25000;
 
 let myChorus = new Tone.Chorus({
   "frequency" : 0.33,
