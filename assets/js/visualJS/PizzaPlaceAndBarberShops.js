@@ -57,7 +57,8 @@ function getData(){
 }
 
 function setup(){
-  createCanvas(windowWidth, windowHeight);
+  var myCanvas = createCanvas(windowWidth, windowHeight);
+  myCanvas.style('position', 'absolute');
   getData();
   frameRate(30);
   background(50);
