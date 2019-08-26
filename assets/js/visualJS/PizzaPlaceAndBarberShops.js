@@ -61,8 +61,7 @@ function getData(){
 }
 
 function setup(){
-  var myCanvas = createCanvas(windowWidth, windowHeight);
-  myCanvas.style('position', 'absolute');
+  createCanvas(windowWidth, windowHeight);
   select('#enter-button').mousePressed(startProgram);
   getData();
   frameRate(30);
