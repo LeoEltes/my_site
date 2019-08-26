@@ -4,8 +4,6 @@ let test = false;
 let arrayNumber = 0;
 let xpos1, ypos1;
 
-let buttonToggle = false;
-
 let emptyArray = [];
 let synthArray = [];
 let waveformArray = [];
@@ -104,7 +102,7 @@ function draw(){
     console.log('loading...');
     getData();
   }
-  else if(test){
+  else if(test == true){
     background(50);
     getData();
 
@@ -199,6 +197,4 @@ function authorize(){
 function startProgram(){
   select("#wrapper").addClass('hide-opacity');
   select("#defaultCanvas0").addClass('show-opacity');
-
-  buttonToggle = true;
 }
