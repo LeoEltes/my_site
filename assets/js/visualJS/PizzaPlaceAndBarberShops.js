@@ -1,3 +1,7 @@
+if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+ throw new Error("This script is not supported on mobile units");
+}
+
 //"REG" = prodclass på Öresundståg, "VAS" = prodclass på Västtågen
 let myData = [];
 let test = false;
