@@ -4,6 +4,8 @@ let test = false;
 let arrayNumber = 0;
 let xpos1, ypos1;
 
+let buttonToggle = false;
+
 let emptyArray = [];
 let synthArray = [];
 let waveformArray = [];
@@ -59,6 +61,7 @@ function getData(){
 function setup(){
   var myCanvas = createCanvas(windowWidth, windowHeight);
   myCanvas.style('position', 'absolute');
+  select('#enter-button').mousePressed(startProgram);
   getData();
   frameRate(30);
   background(50);
@@ -191,4 +194,11 @@ function authorize(){
       token = res.body.access_token;
     }
   })
+}
+
+function startProgram(){
+  select("#wrapper").addClass('hide-opacity');
+  select("#defaultCanvas0").addClass('show-opacity');
+
+  buttonToggle = true;
 }
