@@ -197,4 +197,7 @@ function authorize(){
 function startProgram(){
   select("#wrapper").addClass('hide-opacity');
   select("#defaultCanvas0").addClass('show-opacity');
+  StartAudioContext(Tone.context, '#enter-button').then(function(){
+	//started
+  })
 }
