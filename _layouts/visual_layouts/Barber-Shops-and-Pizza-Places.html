@@ -133,6 +133,69 @@
     margin: 0;
   }
 
+
+  #instructions-wrapper{
+    width: 100%;
+    display: none;
+    position: absolute;
+    text-align: center;
+  }
+
+  #instructions {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    text-align: center;
+    padding-top: 12px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    color: white;
+  }
+
+  #instructions:hover{
+    border-bottom: white solid 1px;
+  }
+
+  #instructions-wrapper.show-opacity{
+    display: block;
+  }
+
+  #instructions .popuptext {
+    visibility: hidden;
+    width: 400px;
+    background-color: #555;
+    text-align: center;
+    color: #fff;
+    border-radius: 6px;
+    padding: 8px;
+    position: absolute;
+    z-index: 1;
+    left: 50%;
+    margin-left: -200px;
+    bottom: -1100%;
+    line-height: 1.4;
+  }
+
+  #instructions .popuptext::after {
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent #555 transparent;
+  }
+  /* Toggle this class - hide and show the popup */
+  #instructions .show {
+    visibility: visible;
+    -webkit-animation: fadein 1s;
+    animation: fadein 1s;
+  }
+
+  
   .mobile-warning{
     display: none;
     color: white;
@@ -284,5 +347,17 @@
       <p class="mobile-warning">This project is not ready for mobile yet, please visit on a desktop browser</p>
     </div>
   </div>
+  <div id="instructions-wrapper">
+    <div id="instructions" onclick="popupFunction()">What's going on?
+      <span class="popuptext" id="myPopup">Data is being retreived from Västtrafik using their public API. The data contains information about vehicles coordinates in real time. Each circle represents a vehicle in real time and depending on its location a tone is produced.<br /> <br /> Sometimes you may hear a slight echo, it means that the vehicle is delayed and will not arrive on schedule. The stereo field also changes depending on where the vehicle is located. Listen and try to figure out what data all of the sounds are controlled by. <br /> <br /> The glitches and bugs that appear are sadly on Västtrafik's end and I am not skilled (or patient) enough to work around it. Try to see it as an artistic flavour!</span>
+    </div>
+  </div>
+  <script>
+    // When the user clicks on div, open the popup
+    function popupFunction() {
+      var popup = document.getElementById("myPopup");
+      popup.classList.toggle("show");
+    }
+  </script>
 </body>
 </html>
