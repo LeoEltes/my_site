@@ -55,7 +55,7 @@ let pad = new Tone.PolySynth(8, Tone.Synth, {
 
 myChorus.connect(reverb);
 pad.connect(myChorus);
-Tone.Master.volume.value = -18;
+Tone.Master.volume.value = -12;
 
 function playSynth2(){
   synth2.triggerAttack(bassArray[round(random(0, bassArray.length - 1))]);
