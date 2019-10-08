@@ -130,7 +130,7 @@ function draw(){
       fill(255);
       ellipse(0, 0, 21);
       strokeWeight(2);
-      text(myData[i].name, 0 + 10, 0 + 4);
+      text(myData[i].name, 0 + 14, 0 + 4);
 
       rotate(angle);
       noFill();
