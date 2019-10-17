@@ -56,7 +56,7 @@ function getData(){
       error: function(xhr, ajaxOptions, thrownError){
           console.log(xhr.status);
           console.log(thrownError);
-          authorize(;
+          authorize();
         }
       });
 }
