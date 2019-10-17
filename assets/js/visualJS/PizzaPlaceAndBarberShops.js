@@ -56,6 +56,7 @@ function getData(){
       error: function(xhr, ajaxOptions, thrownError){
           console.log(xhr.status);
           console.log(thrownError);
+          authorize(;
         }
       });
 }
@@ -181,6 +182,7 @@ function playRandomTone(index, pitch, panVal){
 }
 
 function authorize(){
+  deviceiD = new Date().getTime();
   let credentials = btoa(key + ':' + secret);
 
   let request = superagent('POST', 'https://api.vasttrafik.se/token');
