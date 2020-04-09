@@ -10,12 +10,9 @@
     <meta name="description" content="made with cables" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script>
-    $(document).ready(function(){
-      $('#button play').attr('class', 'myButton');
-    });
 
     $(document).ready(function() {
-      var btn = $(".myButton");
+      var btn = $(".button");
       btn.click(function() {
         btn.toggleClass("paused");
         return false;
@@ -33,7 +30,7 @@
         canvas {
             display: block;
         }
-        .myButton {
+        .button {
           border: 0;
           background: transparent;
           box-sizing: border-box;
